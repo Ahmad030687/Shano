@@ -51,19 +51,19 @@ function getVideoID(url) {
   return match ? match[1] : null;
 }
 
-/* ⚙ CONFIG — name LOWERCASE is MUST */
+/* ⚙ CONFIG */
 module.exports.config = {
   name: "video",
   version: "2.5.0",
   credits: "Shaan Khan",
   hasPermssion: 0,
   cooldowns: 3,
-  description: "YouTube video download (No prefix needed)",
+  description: "YouTube video download with custom branding",
   commandCategory: "media",
   usages: "video <name | link>"
 };
 
-/* ================= PREFIX-FREE RUN ================= */
+/* ================= RUN ================= */
 module.exports.run = async function ({ api, args, event }) {
   try {
     if (!args[0]) {
@@ -77,7 +77,7 @@ module.exports.run = async function ({ api, args, event }) {
     const input = args.join(" ");
 
     const loading = await api.sendMessage(
-      "🔍 Processing...",
+      "🔍 Searching your video...",
       event.threadID
     );
 
@@ -115,9 +115,11 @@ module.exports.run = async function ({ api, args, event }) {
     return api.sendMessage(
       {
         body:
+          `»»𝑶𝑾𝑵𝑬𝑹««★™  »»𝑺𝑯𝑨𝑨𝑵 𝑲𝑯𝑨𝑵««\n` +
+          `🥀𝒀𝑬 𝑳𝑶 𝑩𝑨𝑩𝒀 𝑨𝑷𝑲𝑰👉 VIDEO\n\n` +
           `🎬 Title: ${data.title}\n` +
           `📺 Quality: ${data.quality || "360p"}\n` +
-          `📥 Download: ${shortLink}`,
+          `📥 Link: ${shortLink}`,
         attachment: await getStreamFromURL(
           data.downloadLink,
           `${data.title}.mp4`
@@ -136,4 +138,3 @@ module.exports.run = async function ({ api, args, event }) {
     );
   }
 };
-    
