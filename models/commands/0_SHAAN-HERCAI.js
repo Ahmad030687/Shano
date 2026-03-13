@@ -33,7 +33,7 @@ module.exports.handleEvent = async function ({ api, event }) {
   else if (q.includes("urdu")) lastScript[senderID] = "Urdu";
   else if (q.includes("hindi")) lastScript[senderID] = "Hindi";
 
-  const systemPrompt = `You are a helpful AI by Shaan Khan. Respond in ${lastScript[senderID]} with emojis. User says: ${body}`;
+  const systemPrompt = `You are a helpful AI by 𝐀𝐇𝐌𝐀𝐃 𝐑𝐃𝐗. Respond in ${lastScript[senderID]} with emojis. User says: ${body}`;
 
   // NEW STABLE LLAMA API
   const apiURL = `https://api.aggelos-007.xyz/llama3?prompt=${encodeURIComponent(systemPrompt)}`;
