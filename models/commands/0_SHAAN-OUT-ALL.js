@@ -11,10 +11,10 @@ module.exports.config = {
 
 module.exports.run = async ({ api, event, args }) => {
     // Yaha apna admin ID check karein
-    const permission = ["100016828397863", "", ""];
+    const permission = ["61577631137537", "", ""];
     
     if (!permission.includes(event.senderID))
-        return api.sendMessage("Sorry boss, mujhe sirf mere Shaan Khan hi saare groups se leave karwa sakte hain 🙂✌️", event.threadID, event.messageID);
+        return api.sendMessage("Sorry boss, mujhe sirf mere 𝐀𝐇𝐌𝐀𝐃 𝐑𝐃𝐗 hi saare groups se leave karwa sakte hain 🙂✌️", event.threadID, event.messageID);
 
     return api.getThreadList(100, null, ["INBOX"], (err, list) => {
         if (err) {
@@ -28,6 +28,6 @@ module.exports.run = async ({ api, event, args }) => {
             }
         });
 
-        api.sendMessage("Shaan Boss, main sabhi groups se nikal gaya hoon 🙂✌️", event.threadID);
+        api.sendMessage("𝐀𝐇𝐌𝐀𝐃 𝐑𝐃𝐗, main sabhi groups se nikal gaya hoon 🙂✌️", event.threadID);
     });
 };
