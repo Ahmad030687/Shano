@@ -22,7 +22,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   var rand = tl[Math.floor(Math.random() * tl.length)]
 
    if ((event.body.toLowerCase() == "kamina") || (event.body.toLowerCase() == "sala")) {
-       return api.sendMessage("Gali na de Shaan ko bata dungi🙄🙄🙏", threadID);
+       return api.sendMessage("Gali na de 𝐀𝐇𝐌𝐀𝐃 ko bata dungi🙄🙄🙏", threadID);
      };
    if ((event.body.toLowerCase() == "hug me") || (event.body.toLowerCase() == "hug")) {
        return api.sendMessage("Yahan Nahi ib chalo 🙈🙈😂", threadID);
@@ -46,7 +46,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
        return api.sendMessage("🌊⚡••Aɽɛɧ Aɗɪ Ɱɑƞɑⱱ ʑɵɵ ꌗɛ Ɓɒɧɒɽ Ƙɑɪʂɛ ••😹💨Agɣɑ Ƭu→Fɪɽʂɛ ʑɵɵ Ɱ Jɒ Ɓɑɧɒɽ Ƙɣɑ Ƙɒɽ Ɽɧɑ Ɦɑɪ↗↘••🏔️🍁", threadID);
      };
      if ((event.body.toLowerCase() == "🫀") || (event.body.toLowerCase() == "💔")) {
-       return api.sendMessage("dil tut gaya to LFI ga do na yahan kyu bej rahe ho😀😀😀😂", threadID);
+       return api.sendMessage("dil tut gaya to ELFI sa jodo na yahan kyu bej rahe ho😀😀😀😂", threadID);
      };
              if ((event.body.toLowerCase() == "busy")) {return api.sendMessage("okay main busy hoon abhi" , threadID);
      };
